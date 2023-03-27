@@ -1,4 +1,5 @@
 const containerEl = document.querySelector(".container");
+const refreshButton = document.getElementById("refresh-button");
 
 for (let index = 0; index < 30; index++) {
     const colorContainerEl = document.createElement("div");
@@ -28,3 +29,7 @@ function randomColor() {
 }
 
 generateColors();
+
+refreshButton.addEventListener('click', () => {
+    generateColors();
+});
